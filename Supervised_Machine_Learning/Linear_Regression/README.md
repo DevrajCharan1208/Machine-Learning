@@ -3,8 +3,8 @@
 This repository contains implementations of **Linear Regression** built from the ground up using **NumPy** and **Matplotlib**. It demonstrates the transition from simple single-variable models to advanced multivariate models with feature scaling.
 
 ## 📂 Project Structure
-* `linear_regression_model.py`: Simple Linear Regression (one feature).
-* `Linear_regression_multivariable_model.py`: Multiple Linear Regression with Z-Score Normalization.
+* `single_variable.py`: Simple Linear Regression (one feature).
+* `multi_variable.py`: Multiple Linear Regression with Z-Score Normalization.
 * `README.md`: Project documentation and mathematical overview.
 
 ---
