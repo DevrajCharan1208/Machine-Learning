@@ -1,6 +1,6 @@
 import tensorflow as tf
-from tensorflow.keras import Sequential
-from tensorflow.keras.layers import Dense
+from tensorflow.keras import Sequential  # type: ignore
+from tensorflow.keras.layers import Dense # type: ignore
 import numpy as np
 
 np.random.seed(42)
@@ -19,7 +19,7 @@ model = Sequential([
     Dense(units=1,activation='sigmoid')
 ])
 
-from tensorflow.keras.losses import BinaryCrossentropy
+from tensorflow.keras.losses import BinaryCrossentropy # type: ignore
 model.compile(loss = BinaryCrossentropy())
 model.fit(X,Y,epochs = 100)
 
