@@ -1,6 +1,6 @@
 # 🤖 Machine Learning Specialization — Andrew Ng (Coursera)
 
-This repository contains my personal notes, implementations, and experiments from the **Machine Learning Specialization** by Andrew Ng on Coursera. All models are built **from scratch using NumPy** — no Scikit-Learn — to develop a deep understanding of the underlying mathematics.
+This repository contains my personal notes, implementations, and experiments from the **Machine Learning Specialization** by Andrew Ng on Coursera. Core algorithms are built **from scratch using NumPy** to develop a deep understanding of the underlying mathematics, with TensorFlow used where the course introduces it.
 
 ---
 
@@ -13,12 +13,13 @@ This repository contains my personal notes, implementations, and experiments fro
 | Linear Regression (Single & Multi-variable) | `Supervised_Machine_Learning/Linear_Regression/` | ✅ Done |
 | Logistic Regression & Regularization | `Supervised_Machine_Learning/Classification/` | ✅ Done |
 
-### 🔲 Course 2: Advanced Learning Algorithms
+### 🟡 Course 2: Advanced Learning Algorithms
 
-| Topic | Folder | Status |
+| Topic | File | Status |
 |---|---|---|
-| Neural Networks | `Advanced_learning_algorithms/` | 🔲 Upcoming |
-| Decision Trees | `Advanced_learning_algorithms/` | 🔲 Upcoming |
+| Forward Propagation (NumPy from scratch) | `Advanced_Learning_Algorithms/Forward_Propagation.py` | ✅ Done |
+| Training a Neural Network (TensorFlow) | `Advanced_Learning_Algorithms/Training_Neural_Network_Tensorflow.py` | ✅ Done |
+| Decision Trees | `Advanced_Learning_Algorithms/` | 🔲 Upcoming |
 
 ### 🔲 Course 3: Unsupervised Learning, Recommenders, Reinforcement Learning
 > Upcoming
@@ -45,7 +46,10 @@ Machine-Learning/
 │       ├── decision_boundary_underfit.png      # λ = 1    — Underfitting
 │       └── README.md                           # Bias-Variance tradeoff experiment
 │
-└── Advanced_learning_algorithms/       # 🔲 Coming soon
+└── Advanced_Learning_Algorithms/
+    ├── Forward_Propagation.py                  # Manual forward pass using NumPy (sigmoid, dense, sequential)
+    ├── Training_Neural_Network_Tensorflow.py   # Binary classifier trained with TF/Keras (BinaryCrossentropy)
+    └── README.md                               # Concepts & implementation notes for Course 2
 ```
 
 ---
@@ -53,13 +57,15 @@ Machine-Learning/
 ## 🛠️ Tech Stack
 
 - **Language:** Python 3.x
-- **Libraries:** NumPy, Matplotlib
-- **No Scikit-Learn** — everything implemented from scratch
+- **Libraries:** NumPy, Matplotlib, TensorFlow / Keras
+- **No Scikit-Learn** — core algorithms implemented from scratch
+- **TensorFlow** — used for higher-level neural network training (as introduced in Course 2)
 
 ---
 
 ## 🧠 Key Concepts Covered So Far
 
+**Course 1 — Supervised Machine Learning**
 - **Gradient Descent** — parameter optimization with learning rate tuning
 - **Z-Score Normalization** — feature scaling for faster convergence
 - **Sigmoid Function** — mapping linear output to probabilities
@@ -67,3 +73,9 @@ Machine-Learning/
 - **L2 Regularization** — preventing overfitting via weight penalty
 - **Polynomial Feature Mapping** — enabling non-linear decision boundaries
 - **Bias-Variance Tradeoff** — understanding underfitting vs. overfitting
+
+**Course 2 — Advanced Learning Algorithms**
+- **Forward Propagation** — manual layer-by-layer computation using NumPy (dense + sequential)
+- **Neural Network Architecture** — stacking Dense layers with sigmoid activations
+- **TensorFlow / Keras** — building and compiling models with `Sequential`, `Dense`, `BinaryCrossentropy`
+- **Model Training** — using `model.compile()` and `model.fit()` for end-to-end learning
