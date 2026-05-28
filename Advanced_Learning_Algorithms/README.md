@@ -8,8 +8,9 @@ This folder contains implementations from **Course 2** of the [Machine Learning 
 
 | File | Description |
 |---|---|
-| `Forward_Propagation.py` | Manual forward pass implemented in NumPy — sigmoid activation, `dense()` layer, and `sequential()` network |
-| `Training_Neural_Network_Tensorflow.py` | Binary classifier built and trained using TensorFlow/Keras (`Sequential`, `Dense`, `BinaryCrossentropy`) |
+| `forward_propagation.py` | Manual forward pass implemented in NumPy — sigmoid activation, `dense()` layer, and `sequential()` network |
+| `train_neural_network_tensorflow.py` | Binary classifier built and trained using TensorFlow/Keras (`Sequential`, `Dense`, `BinaryCrossentropy`) |
+| `train_neural_network_softmax.py` | Multiclass classifier built and trained using TensorFlow/Keras with Softmax and linear activation for numerical stability |
 
 ---
 
@@ -24,8 +25,13 @@ This folder contains implementations from **Course 2** of the [Machine Learning 
 - **`Sequential` model** — stacks layers in order
 - **`Dense` layer** — fully connected layer with configurable units and activation
 - **`BinaryCrossentropy`** — loss function for binary classification problems
+- **`SparseCategoricalCrossentropy`** — loss function for multiclass classification problems where target labels are integers
 - **`model.compile()`** — sets the optimizer and loss
 - **`model.fit()`** — runs gradient descent over epochs to learn weights
+
+### Numerical Stability (Softmax / from_logits)
+- For multiclass output, using a `linear` activation in the final output layer and setting `from_logits=True` in the loss function reduces round-off errors by allowing TensorFlow to optimize the loss calculation.
+- During inference, `tf.nn.softmax()` is applied to the output logits to obtain probabilities.
 
 ---
 
