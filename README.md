@@ -17,8 +17,9 @@ This repository contains my personal notes, implementations, and experiments fro
 
 | Topic | File | Status |
 |---|---|---|
-| Forward Propagation (NumPy from scratch) | `Advanced_Learning_Algorithms/Forward_Propagation.py` | ✅ Done |
-| Training a Neural Network (TensorFlow) | `Advanced_Learning_Algorithms/Training_Neural_Network_Tensorflow.py` | ✅ Done |
+| Forward Propagation (NumPy from scratch) | `Advanced_Learning_Algorithms/forward_propagation.py` | ✅ Done |
+| Training a Neural Network (TensorFlow) | `Advanced_Learning_Algorithms/train_neural_network_tensorflow.py` | ✅ Done |
+| Multiclass Classification (Softmax) | `Advanced_Learning_Algorithms/train_neural_network_softmax.py` | ✅ Done |
 | Decision Trees | `Advanced_Learning_Algorithms/` | 🔲 Upcoming |
 
 ### 🔲 Course 3: Unsupervised Learning, Recommenders, Reinforcement Learning
@@ -47,8 +48,9 @@ Machine-Learning/
 │       └── README.md                           # Bias-Variance tradeoff experiment
 │
 └── Advanced_Learning_Algorithms/
-    ├── Forward_Propagation.py                  # Manual forward pass using NumPy (sigmoid, dense, sequential)
-    ├── Training_Neural_Network_Tensorflow.py   # Binary classifier trained with TF/Keras (BinaryCrossentropy)
+    ├── forward_propagation.py                  # Manual forward pass using NumPy (sigmoid, dense, sequential)
+    ├── train_neural_network_tensorflow.py      # Binary classifier trained with TF/Keras (BinaryCrossentropy)
+    ├── train_neural_network_softmax.py         # Multiclass classifier trained with TF/Keras (SparseCategoricalCrossentropy)
     └── README.md                               # Concepts & implementation notes for Course 2
 ```
 
@@ -76,6 +78,7 @@ Machine-Learning/
 
 **Course 2 — Advanced Learning Algorithms**
 - **Forward Propagation** — manual layer-by-layer computation using NumPy (dense + sequential)
-- **Neural Network Architecture** — stacking Dense layers with sigmoid activations
-- **TensorFlow / Keras** — building and compiling models with `Sequential`, `Dense`, `BinaryCrossentropy`
+- **Neural Network Architecture** — stacking Dense layers with sigmoid, relu, and linear activations
+- **TensorFlow / Keras** — building and compiling models with `Sequential`, `Dense`, `BinaryCrossentropy`, and `SparseCategoricalCrossentropy`
 - **Model Training** — using `model.compile()` and `model.fit()` for end-to-end learning
+- **Numerical Stability (Softmax)** — using `linear` activation in the final layer with `from_logits=True` to reduce round-off errors
