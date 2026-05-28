@@ -21,7 +21,7 @@ model = Sequential([
 from tensorflow.keras.losses import SparseCategoricalCrossentropy # type: ignore
 model.compile(loss=SparseCategoricalCrossentropy(from_logits=True))
 
-#fir
+# Fit the model
 model.fit(X,Y,epochs=100)
 
 #predict
